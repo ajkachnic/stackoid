@@ -11,6 +11,7 @@ function limiter({ max, expireTime, windowTime }) {
     }),
     max: max || 50,
     windowMs: windowTime || 10 * 60 * 1000,
+    headers: false,
     message: JSON.stringify({
       ok: false,
       message: "Too many requests, please try again later.",

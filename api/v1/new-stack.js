@@ -1,7 +1,7 @@
 import nextConnect from "next-connect";
 import middleware from "../../middleware/middleware";
 import limiter from "../../middleware/limiter";
-import { isURL } from '../../utils/validate';
+import { isURL, scrubURL } from '../../utils/validate';
 
 const handler = nextConnect();
 
@@ -28,6 +28,8 @@ handler.post(async (req, res) => {
   //   time: new Date().toISOString()
   // };
   if (req.body.link == undefined || isURL(req.body.link)) {
+    req.body.link = scrubURL(req.body.link);
+    console.log(req.body.link);
     const body = {
       ...req.body,
       time: new Date().toISOString(),

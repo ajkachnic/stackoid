@@ -9,3 +9,11 @@ export function isURL(url) {
   }
   return false
 }
+export function scrubURL(url) {
+  if(url.startsWith("https://") || url.startsWith("http://")) {
+    return url
+  }
+  else {
+    return "http://" + url
+  }
+}

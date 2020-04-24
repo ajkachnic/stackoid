@@ -1,5 +1,6 @@
 {
   "env": {
     "STACKOID_MONGO": "@stackoid-mongo"
-  }
+  },
+  "version": 2
 }

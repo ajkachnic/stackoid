@@ -36,12 +36,15 @@
 
   }
   .parts {
-  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap:1rem;
   }
   a {
     color: #3385FF;
     text-decoration: none;
   }
+
 </style>
 <div class="card" >
   <h2 class="name">
