@@ -1,0 +1,58 @@
+{
+  "name": "Stackoid",
+  "tagline": "Stackoid is a platform for discovering new technologies and services used by projects",
+  "icon-link": "https://unsplash.it/200/200",
+  "languages-and-frameworks": {
+    "usage": "We use Go as our backend for microservices. Svelte is our frontend framework",
+    "items": [
+      {
+        "name": "Golang",
+        "link": "https://golang.org"
+      },
+      {
+        "name": "Svelte",
+        "link": "https://svelte.dev"
+      },
+      {
+        "name": "JavaScript",
+        "link": "https://node.org"
+      }
+    ]
+  },
+  "database": {
+    "usage": "MongoDB is an excellent, widely known NoSQL database solution",
+    "items": [
+      {
+        "name": "MongoDB",
+        "link": "https://mongodb.com"
+      }
+    ]
+  },
+  "technologies": {
+    "usage": "Our serverless architecture allows us to reduce costs and be more effeicent",
+    "items": [
+      {
+        "name": "Serverless",
+        "link": "https://serverless.com"
+      }
+    ]
+  },
+  "other": {
+    "usage": "We use Cloudinary to store the Icons for projects on our service",
+    "items": [
+      {
+        "name": "Cloudinary",
+        "link": "https://cloudinary.com"
+      }
+    ]
+  },
+  "deployment": {
+    "usage": "Our backend and frontend is deployed on zeit.co",
+    "items": [
+      {
+        "name": "Zeit",
+        "link": "https://zeit.co"
+      }
+    ]
+  }
+}

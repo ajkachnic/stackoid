@@ -1,0 +1,5 @@
+{
+  "env": {
+    "STACKOID_MONGO": "@stackoid-mongo"
+  }
+}
