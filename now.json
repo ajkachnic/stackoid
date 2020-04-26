@@ -1,6 +1,7 @@
 {
   "env": {
-    "STACKOID_MONGO": "@stackoid-mongo"
+    "STACKOID_MONGO": "@stackoid-mongo",
+    "DB_NAME": "@db_name"
   },
   "version": 2
 }
