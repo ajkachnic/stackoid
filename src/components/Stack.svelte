@@ -50,7 +50,7 @@
   }
   .expand {
 		background: var(--theme-accent);
-		color: var(--background);
+		color: #101010;
 		padding: .75em 1.5em;
 		font-size: 1rem;
 		border: none;
