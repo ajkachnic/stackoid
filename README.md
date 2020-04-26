@@ -1,5 +1,7 @@
 # Stackoid
-> A simple way of sharing technologies
+> A simple way of sharing technologies used on side projects
+
+[Check it out](https://stackoid.now.sh)
 
 ## Running yourself
 Go to [Vercel](https://vercel.com) and sign up if you haven't already.
