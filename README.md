@@ -8,3 +8,5 @@ Import a new project, with GitHub, from a third party project, using `https://gi
 Upon deploying, set the enviornment variable `STACKOID_MONGO` to a MongoDB connection URI.
 
 Reploy and the project should be up and running
+
+Made with ❤️ by [Andrew Kachnic](https://github.com/ajkachnic)
