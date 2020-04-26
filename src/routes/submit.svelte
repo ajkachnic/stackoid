@@ -182,12 +182,12 @@ async function handleSubmit(event) {
 				<label class="small">
 					Usage
 					<p class="description">Describe how these are used in your project</p>
-					<input type="text" bind:value={databaseUsage}>
+					<input type="text" bind:value={deploymentUsage}>
 				</label>
 				<label class="small">
 					Items
 					<p class="description">Comma seperated values (ex. AWS,Azure)</p>
-					<input type="text" bind:value={database}>
+					<input type="text" bind:value={deployment}>
 				</label>
 			</label>
 		</section>
