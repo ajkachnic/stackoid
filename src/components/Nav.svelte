@@ -1,40 +1,71 @@
+<script>
+import { getContext } from 'svelte';
+const theme = getContext("theme");
 
+let toggle = theme.toggle
+</script>
 <style>
+* {
+		font-family: 'AvenirNext';
+}
 	nav {
 		font-family: 'AvenirNext';
 		font-weight: 500;
 		padding: 0 1em;
-		display: grid;
-		grid-template-columns: 3fr 2fr;
 	}
 
 	ul {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		justify-content: space-evenly;
 		list-style: none;
 	}
 
-	a {
+	a, .a {
+		border: none;
+		padding: none;
+		background: none;
 		text-decoration: none;
-		padding: 1em 0.5em;
+		cursor: pointer;
+		/* padding: 1em 0.5em; */
 		font-size: 1.25rem;
+		color: var(--theme-foreground);
 	}
 	h2 {
-		padding: 1em 0.5em;
+		/* padding: 1em 0.5em; */
 		font-size: 1.5rem;
 		font-weight: 700;
-		color: #3385FF;
+		color: var(--theme-accent);
+		display: none;
+	}
+	.logo {
+		display: none;
+	}
+	@media (min-width: 500px) {
+		h2,.logo {
+			display: block;
+		}
+		ul {
+			display: grid;
+			justify-content: center;
+			grid-template-columns: 2fr repeat(3, 1fr);
+			list-style: none;
+		}
 	}
 </style>
 
 <nav>
-	<h2>stackoid</h2>
 	<ul>
+		<li class="logo">
+			<h2>stackoid</h2>
+		</li>
 		<li>
 			<a href='/'>stacks</a>
 		</li>
 		<li>
 			<a href='/submit'>submit</a>
+		</li>
+		<li>
+			<span class="a" on:click={toggle}>theme</span>
 		</li>
 	</ul>
 </nav>

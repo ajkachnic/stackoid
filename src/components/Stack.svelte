@@ -13,17 +13,20 @@
     if(JSON.stringify(object) == JSON.stringify({})) return true;
     return false;
   }
+
+  let expanded = false;
 </script>
 <style>
   .card {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
-    padding: 2rem;
-    background: #ffffff;
+    padding: 1.5rem;
+    background: var(--theme-background);
     height:auto;
   }
   h2 {
     font-size: 2rem;
     font-weight: 700;
+    word-wrap: break-word;
   }
   h3 {
     font-weight: 600;
@@ -32,26 +35,42 @@
   blockquote {
     margin-left: 1em;
   }
-  @media (min-width: 900px) {
 
-  }
   .parts {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
     gap:1rem;
   }
+  .expanded {
+    display: grid;
+  }
   a {
-    color: #3385FF;
+    color: var(--theme-accent);
     text-decoration: none;
   }
+  .expand {
+		background: var(--theme-accent);
+		color: var(--background);
+		padding: .75em 1.5em;
+		font-size: 1rem;
+		border: none;
+		font-weight:500;
+		font-family: 'AvenirNext', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		margin: .5em 0 0;
+  }
 
+  @media(min-width: 300px) {
+  .parts {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  }
+  }
 </style>
 <div class="card" >
   <h2 class="name">
-    <a href={link ? link : "#"} target={link? "_blank" : ""}>{name}</a>
+    <a href={link ? link : "#"} target={link? "_blank" : ""} rel="noreferrer">{name}</a>
   </h2>
   <blockquote class="tagline">{tagline}</blockquote>
-  <div class="parts">
+  <div class="parts" class:expanded="{ expanded == true}">
   {#if !isEmpty(languagesAndFrameworks)}
     <div class="laf">
       <h3>Languages & Frameworks</h3>
@@ -108,4 +127,6 @@
     </div>
     {/if}
   </div>
+  <button class="expand" on:click={() => expanded = !expanded}>{expanded ? "Close..." : "Expand..."}</button>
+
 </div>

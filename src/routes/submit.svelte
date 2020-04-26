@@ -22,6 +22,9 @@ p {
 input {
 	margin: .5em 0 1em 0;
 	font-size: 1rem !important;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+	color: var(--theme-background);
+	padding: .25em 0 .5em 0;
 }
 .description {
 	font-style: italic;
@@ -32,6 +35,17 @@ input {
 .fields {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+button {
+	background: var(--theme-accent);
+	color: var(--background);
+	padding: .75em 1.5em;
+	font-size: 1.25rem;
+	border: none;
+	margin: 1em 0;
+	font-weight:500;
+	font-family: 'AvenirNext', -apple-system,BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 2em 0;
 }
 </style>
 <script>

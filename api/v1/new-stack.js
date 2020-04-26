@@ -1,7 +1,9 @@
 import nextConnect from "next-connect";
 import middleware from "../../middleware/middleware";
 import limiter from "../../middleware/limiter";
-import { isURL, scrubURL } from '../../utils/validate';
+import validate from '@ajkachnic/validata';
+
+import { scrubURL } from '../../utils/validate';
 
 const handler = nextConnect();
 
@@ -27,9 +29,11 @@ handler.post(async (req, res) => {
   //   iconLink: req.body.iconLink,
   //   time: new Date().toISOString()
   // };
-  if (req.body.link == undefined || isURL(req.body.link)) {
+  if (req.body.link == undefined || validate(req.body.link, {
+    isUrl: true,
+    max: 100
+  })) {
     req.body.link = scrubURL(req.body.link);
-    console.log(req.body.link);
     const body = {
       ...req.body,
       time: new Date().toISOString(),
@@ -46,7 +50,7 @@ handler.post(async (req, res) => {
   } else {
     res.status(400).json({
       ok: false,
-      message: "Invalid URL",
+      message: "Invalid URL or too long url",
     });
   }
 });

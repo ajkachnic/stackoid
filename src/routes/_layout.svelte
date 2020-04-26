@@ -1,15 +1,24 @@
 <script>
+  import ThemeContext from '../components/ThemeContext.svelte';
 	import Nav from '../components/Nav.svelte';
 
-	export let segment;
+  export let segment;
+  
+  
 </script>
 
 <style>
+
 * {
 	font-family: 'AvenirNext', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 :root {
-		background-color: #F7FBFF;
+    --theme-background: #01024e;
+    --theme-foreground: #fff;
+    --theme-accent: #ff6464;
+    --theme-alt: #000042;
+    
+		background-color: var(--theme-alt)/*#F7FBFF*/;
 
 }
 @font-face {
@@ -160,15 +169,46 @@
 	main {
 		position: relative;
 		max-width: 100em;
-		background-color: #F7FBFF;
-		padding: 2em;
+		background-color: var(--theme-alt)/* #F7FBFF */;
+		color: var(--theme-foreground);
+    padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
 </style>
 
+<svelte:head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158973361-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158973361-3');
+</script>
+<meta name="description" content="A simple way of sharing technologies used on side projects">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@su_andrewk">
+<meta name="twitter:title" content="Stackoid">
+<meta name="twitter:description" content="A simple way of sharing technologies used on side projects">
+<meta name="twitter:creator" content="@su_andrewk">
+
+<meta name="twitter:image" content="/twitter.png">
+
+<meta property="og:title" content="Title Here" />
+<meta property="og:url" content="https://stackoid.now.sh" />
+<meta property="og:image" content="/twitter.png" />
+<meta property="og:description" content="A simple way of sharing technologies used on side projects" />
+<meta property="og:site_name" content="Stackoid" />
+
+</svelte:head>
+<ThemeContext>
 <Nav {segment}/>
 
 <main>
+
 	<slot></slot>
 </main>
+</ThemeContext>

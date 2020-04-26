@@ -73,13 +73,16 @@
 	}
 
 	.stacks {
-		display: grid;
+		display: flex;
 		gap: 1rem;
+		justify-content: center;
+
 		margin: 1.5em 0;
+		flex-direction: column;
 	}
 	.loadMore {
-		background: #3385FF;
-		color:#fff;
+		background: var(--theme-accent);
+		color: var(--background);
 		padding: .75em 1.5em;
 		font-size: 1.25rem;
 		border: none;
@@ -93,13 +96,15 @@
 			font-size: 4em;
 		}
 	}
-	@media (min-width: 500px) {
+	/* @media (min-width: 500px) {
 		.stacks {
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		grid-template-columns: 1fr;
 		justify-content: center;
 		align-items: flex-start;
+		display: grid;
 		}
-	}
+	} */
 </style>
 
 <svelte:head>
