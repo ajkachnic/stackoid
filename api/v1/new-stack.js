@@ -9,11 +9,6 @@ import { scrubURL } from "../../utils/validate";
 
 const handler = nextConnect();
 
-middleware.use(
-  bodyParser.json({
-    limit: ".5kb",
-  })
-);
 handler.use(
   limiter({
     max: 10,
