@@ -31,6 +31,7 @@
        
   font-style:   normal;
   font-weight:  200;
+  font-display: swap;
 }
 
 @font-face {
@@ -42,6 +43,7 @@
        url('/fonts/AvenirNextLTPro-Regular.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  300;
 }
 
@@ -54,6 +56,7 @@
        url('/fonts/AvenirNextLTPro-Medium.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  400;
 }
 
@@ -67,6 +70,7 @@
        url('/fonts/AvenirNextLTPro-Demi.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  500;
 }
 
@@ -79,6 +83,7 @@
        url('/fonts/AvenirNextLTPro-Bold.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  600;
 }
 
@@ -91,6 +96,7 @@
        url('/fonts/AvenirNextLTPro-UltLtCn.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  200;
 }
 
@@ -103,6 +109,7 @@
        url('/fonts/AvenirNextLTPro-Cn.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  300;
 }
 
@@ -115,6 +122,7 @@
        url('/fonts/AvenirNextLTPro-MediumCn.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  400;
 }
 
@@ -127,6 +135,7 @@
        url('/fonts/AvenirNextLTPro-DemiCn.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  500;
 }
 
@@ -139,6 +148,7 @@
        url('/fonts/AvenirNextLTPro-BoldCn.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  600;
 }
 
@@ -151,6 +161,7 @@
        url('/fonts/AvenirNextLTPro-HeavyCn.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-display: swap;
   font-weight:  600;
 }
 
@@ -164,6 +175,7 @@
        url('/fonts/AvenirNextLTPro-It.svg#svg') format('svg'); /* Legacy iOS */
        
   font-style:   italic;
+  font-display: swap;
   font-weight:  300;
 }
 	main {
