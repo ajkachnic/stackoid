@@ -49,6 +49,8 @@ button {
 }
 </style>
 <script>
+  import Button from '../components/Button.svelte';
+
 import swal from '../../utils/swal.js'
 let name = '';
 let tagline = '';
@@ -206,7 +208,7 @@ async function handleSubmit(event) {
 			</label>
 		</section>
 	</div>
-	<button type="submit">Submit</button>
+	<Button type="submit">Submit</Button>
 	<p class="description">*: Optional</p>
 </form>
 </main>
