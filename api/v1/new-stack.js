@@ -1,5 +1,4 @@
 import nextConnect from "next-connect";
-import bodyParser from "body-parser";
 
 import middleware from "../../middleware/middleware";
 import limiter from "../../middleware/limiter";
