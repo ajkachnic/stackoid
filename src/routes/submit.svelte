@@ -39,7 +39,7 @@ input {
 
 </style>
 <script>
-  import Button from '../components/Button.svelte';
+import Button from '../components/Button.svelte';
 
 import swal from '../../utils/swal.js'
 let name = '';
