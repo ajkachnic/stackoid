@@ -1,4 +1,6 @@
 <script>
+  import Button from './Button.svelte';
+
   export let name;
   export let tagline;
   // export let iconLink;
@@ -48,17 +50,7 @@
     color: var(--theme-accent);
     text-decoration: none;
   }
-  .expand {
-		background: var(--theme-accent);
-		color: #101010;
-		padding: .75em 1.5em;
-		font-size: 1rem;
-		border: none;
-		font-weight:500;
-		font-family: 'AvenirNext', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		margin: .5em 0 0;
-  }
-
+  
   @media(min-width: 300px) {
   .parts {
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
@@ -127,6 +119,6 @@
     </div>
     {/if}
   </div>
-  <button class="expand" on:click={() => expanded = !expanded}>{expanded ? "Close..." : "Expand..."}</button>
+  <Button handleClick={() => expanded = !expanded}>{expanded ? "Close..." : "Expand..."}</Button>
 
 </div>

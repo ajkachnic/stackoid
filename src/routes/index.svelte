@@ -3,6 +3,8 @@
 
 
 	import Stack from '../components/Stack.svelte';
+  import Button from '../components/Button.svelte';
+	
 	import swal from '../../utils/swal.js';
 	let stacks = [];
 	let skip = 0;
@@ -80,17 +82,7 @@
 		margin: 1.5em 0;
 		flex-direction: column;
 	}
-	.loadMore {
-		background: var(--theme-accent);
-		color: #101010;
-		padding: .75em 1.5em;
-		font-size: 1.25rem;
-		border: none;
-		margin: 1em 0;
-		font-weight:500;
-		font-family: 'AvenirNext', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		margin: 2em 0;
-	}
+
 	@media (min-width: 480px) {
 		h1 {
 			font-size: 4em;
@@ -129,7 +121,7 @@
 			/>
 		{ /each }
 	</section>
-	<button on:click={loadMore} class="loadMore">Load More</button>
+	<Button handleClick={loadMore}>Load More</Button>
 </main>
 <footer>
 <p>Made with ❤️ by <a href="https://github.com/ajkachnic">Andrew Kachnic</a></p>
