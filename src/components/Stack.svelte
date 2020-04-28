@@ -12,6 +12,7 @@
   export let link;
 
   function isEmpty(object) {
+    if(object == null || undefined) return true;
     if(JSON.stringify(object) == JSON.stringify({})) return true;
     return false;
   }
