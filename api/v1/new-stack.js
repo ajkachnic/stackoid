@@ -51,29 +51,32 @@ handler.post(async (req, res) => {
   //   time: new Date().toISOString()
   // };
   if (req.body.link == undefined || isUrl(req.body.link)) {
-    if (fitsMax(req.body.name, 50) && fitsMax(req.body.tagline, 75) && bodyFits(req.body, 500)) {
-        if (req.body.name != undefined) {
-          req.body.link = scrubURL(req.body.link);
-          const body = {
-            name: req.body.name,
+    if (
+      fitsMax(req.body.name, 50) &&
+      fitsMax(req.body.tagline, 75) &&
+      bodyFits(req.body, 500)
+    ) {
+      if (req.body.name != undefined) {
+        req.body.link = scrubURL(req.body.link);
+        const body = {
+          name: req.body.name,
           tagline: req.body.tagline,
-          langaugesAndFrameworks: req.body.langaugesAndFrameworks,
-          databaseAndStorage: req.body.databaseAndStorage,
-          technologies: req.body.technologies,
-          other: req.body.other,
-          deployment: req.body.deployment,
+          ...(req.body.langaugesAndFrameworks ? {langaugesAndFrameworks: req.body.langaugesAndFrameworks} : {}),
+          ...(req.body.databaseAndStorage ? {databaseAndStorage: req.body.databaseAndStorage} : {}),
+          ...(req.body.technologies ? {technologies: req.body.technologies} : {}),
+          ...(other ? {other: req.body.other} : {}),
+          ...(deployment ? {deployment: req.body.deployment} : {}),
           time: new Date().toISOString(),
         };
 
         stacks.insertOne(body, (err, response) => {
           if (err) throw err;
-          
+
           res.status(200).send({
             ok: true,
             message: "Stack created sucessfully",
           });
         });
-      
       } else {
         res.status(400).json({
           ok: false,
