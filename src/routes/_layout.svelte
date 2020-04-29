@@ -11,6 +11,7 @@
 
 * {
 	font-family: 'AvenirNext', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: inherit;
 }
 :root {
     --theme-background: #01024e;
@@ -19,7 +20,7 @@
     --theme-alt: #000042;
     
 		background-color: var(--theme-alt)/*#F7FBFF*/;
-
+    transition: color .4s cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 @font-face {
   font-family: 'AvenirNext';
@@ -186,6 +187,8 @@
     padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
+
+    transition: color .4s cubic-bezier(0.455, 0.03, 0.515, 0.955), background-color .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	}
 </style>
 
