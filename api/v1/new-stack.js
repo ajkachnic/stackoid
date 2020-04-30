@@ -62,7 +62,7 @@ handler.post(async (req, res) => {
           name: req.body.name,
           tagline: req.body.tagline,
           ...(req.body.languagesAndFrameworks ? { languagesAndFrameworks: req.body.languagesAndFrameworks } : {}),
-          ...(req.body.database ? { databasee: req.body.database }: {}),
+          ...(req.body.database ? { database: req.body.database }: {}),
           ...(req.body.technologies ? { technologies: req.body.technologies } : {}),
           ...(req.body.other ? { other: req.body.other } : {}),
           ...(req.body.deployment ? { deployment: req.body.deployment } : {}),
