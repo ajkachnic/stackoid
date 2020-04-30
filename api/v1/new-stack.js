@@ -61,11 +61,17 @@ handler.post(async (req, res) => {
         const body = {
           name: req.body.name,
           tagline: req.body.tagline,
-          ...(req.body.langaugesAndFrameworks ? {langaugesAndFrameworks: req.body.langaugesAndFrameworks} : {}),
-          ...(req.body.databaseAndStorage ? {databaseAndStorage: req.body.databaseAndStorage} : {}),
-          ...(req.body.technologies ? {technologies: req.body.technologies} : {}),
-          ...(other ? {other: req.body.other} : {}),
-          ...(deployment ? {deployment: req.body.deployment} : {}),
+          ...(req.body.langaugesAndFrameworks
+            ? { langaugesAndFrameworks: req.body.langaugesAndFrameworks }
+            : {}),
+          ...(req.body.databaseAndStorage
+            ? { databaseAndStorage: req.body.databaseAndStorage }
+            : {}),
+          ...(req.body.technologies
+            ? { technologies: req.body.technologies }
+            : {}),
+          ...(req.body.other ? { other: req.body.other } : {}),
+          ...(req.body.deployment ? { deployment: req.body.deployment } : {}),
           time: new Date().toISOString(),
         };
 
