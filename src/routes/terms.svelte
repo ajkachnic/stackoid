@@ -11,7 +11,7 @@
 </style>
 <main>
 <div class="policy">
-<h2 class="title">Privacy Policy</h2>
+<h2 class="title" id="privacy">Privacy Policy</h2>
 <p>Your privacy is important to us. It is Stackoid's policy to respect your privacy regarding any information we may collect from you across our website, <a href="http://stackoid.now.sh">http://stackoid.now.sh</a>, and other sites we own and operate.</p>
 <p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</p>
 <p>We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.</p>
@@ -22,7 +22,7 @@
 <p>This policy is effective as of 1 May 2020.</p>
 <p><a href="https://getterms.io" title="Generate a free privacy policy">Privacy Policy created with GetTerms.</a></p>
 </div>
-<div class="terms">
+<div class="terms" id="terms">
 <h2  class="title">Stackoid Terms of Service</h2>
 <h3>1. Terms</h3>
 <p>By accessing the website at <a href="http://stackoid.now.sh">http://stackoid.now.sh</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.</p>

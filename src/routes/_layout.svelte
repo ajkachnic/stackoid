@@ -1,6 +1,8 @@
 <script>
   import ThemeContext from '../components/ThemeContext.svelte';
 	import Nav from '../components/Nav.svelte';
+	import Footer from '../components/Footer.svelte';
+
 
   export let segment;
   
@@ -226,4 +228,5 @@
 
 	<slot></slot>
 </main>
+<Footer />
 </ThemeContext>

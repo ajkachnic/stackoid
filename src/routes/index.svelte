@@ -66,10 +66,6 @@
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
 	}
-	footer {
-		margin: 3em 0;
-	}
-
 	p {
 		margin: 1em auto;
 	}
@@ -123,6 +119,3 @@
 	</section>
 	<Button handleClick={loadMore}>Load More</Button>
 </main>
-<footer>
-<p>Made with ❤️ by <a href="https://github.com/ajkachnic">Andrew Kachnic</a></p>
-</footer>
