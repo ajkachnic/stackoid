@@ -61,20 +61,14 @@ handler.post(async (req, res) => {
         const body = {
           name: req.body.name,
           tagline: req.body.tagline,
-          ...(req.body.langaugesAndFrameworks
-            ? { langaugesAndFrameworks: req.body.langaugesAndFrameworks }
-            : {}),
-          ...(req.body.databaseAndStorage
-            ? { databaseAndStorage: req.body.databaseAndStorage }
-            : {}),
-          ...(req.body.technologies
-            ? { technologies: req.body.technologies }
-            : {}),
+          ...(req.body.languagesAndFrameworks ? { languagesAndFrameworks: req.body.languagesAndFrameworks } : {}),
+          ...(req.body.database ? { databasee: req.body.database }: {}),
+          ...(req.body.technologies ? { technologies: req.body.technologies } : {}),
           ...(req.body.other ? { other: req.body.other } : {}),
           ...(req.body.deployment ? { deployment: req.body.deployment } : {}),
           time: new Date().toISOString(),
         };
-
+        console.log(body)
         stacks.insertOne(body, (err, response) => {
           if (err) throw err;
 
